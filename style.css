@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
+.navbar {
+    font-size: 18px;
+    border: 1px solid rgb(212, 211, 211);
+    padding: 10px;
+}
+
+.nav-links,
+.logo {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links {
+    border-bottom: 1px solid rgb(231, 229, 229);
+}
+
+.main-nav li {
+    text-align: center;
+    margin: auto;
+    padding: 15px;
+}
+
+.logo {
+    font-family: 'Handlee', cursive;
+    display: inline-block;
+    font-size: 22px;
+    margin-top: 5px;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.navbar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.main-nav {
+    list-style-type: none;
+    display: none;
+}
+
+i {
+    padding: 0 5px;
+}
+
+.search {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 8%;
+        height: 55px;
+        align-items: center;
+    }
+
+    .main-nav {
+        display: flex;
+        margin-left: auto;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .main-nav li {
+        margin: 0;
+        font-size: 25px;
+        padding: 5px;
+    }
+
+    .nav-links {
+        border: none;
+    }
+
+    .logo {
+        margin-top: 0;
+        margin-right: auto;
+    }
+
+    .navbar-toggle,
+    .name {
+        display: none;
+    }
+
+    .search {
+        display: block;
+        padding: 5px;
+        font-family: FontAwesome;
+        height: 28px;
+        width: 230px;
+        border: 1px solid rgb(212, 211, 211);
+        border-radius: .3em;
+        background-color: rgb(248, 248, 248);
+        text-align: center;
+    }
+    
+}
