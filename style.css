@@ -5,46 +5,45 @@
 }
 
 body {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Manrope', sans-serif;
 }
 
 .navbar {
     font-size: 18px;
-    background-image: linear-gradient(260deg, #2376ae 0%, #2376ae 0%, #c16ecf 100%);
-    border: 1px solid rgba(0,0,0,0.2);
-    padding-bottom: 10px;
+    border: 1px solid rgb(212, 211, 211);
+    padding: 10px;
 }
 
-/*the unordered list*/
-.main-nav {
-    list-style-type: none;
-}
-
-.nav-links, .logo {
+.nav-links,
+.logo {
     text-decoration: none;
-    color: rgba(255,255,255,0.7);
+    color: black;
 }
 
-/*unordered list's list item*/
+.nav-links {
+    border-bottom: 1px solid rgb(231, 229, 229);
+}
+
 .main-nav li {
     text-align: center;
-    margin: 15px auto;
+    margin: auto;
+    padding: 15px;
 }
 
 .logo {
+    font-family: 'Handlee', cursive;
     display: inline-block;
     font-size: 22px;
-    margin-top: 10px;
-    margin-left: 20px;
+    margin-top: 5px;
+    margin-left: 15px;
+    font-weight: bold;
 }
 
-/*Toggle button - the hamburger three line button*/
 .navbar-toggle {
     position: absolute;
     top: 10px;
     right: 20px;
     cursor: pointer;
-    color: rgba(255,255,255,0.8);
     font-size: 24px;
 }
 
@@ -53,22 +52,29 @@ body {
     display: none;
 }
 
+i {
+    padding: 0 5px;
+}
+
+.search {
+    display: none;
+}
+
 .active {
     display: block;
 }
 
-/*any screen bigger than 768px*/
 @media screen and (min-width: 768px) {
     .navbar {
         display: flex;
         justify-content: space-between;
-        padding-bottom: 0;
-        height: 70px;
+        height: 55px;
         align-items: center;
     }
 
     .main-nav {
         display: flex;
+        margin-left: auto;
         margin-right: 30px;
         flex-direction: row;
         justify-content: flex-end;
@@ -76,22 +82,45 @@ body {
 
     .main-nav li {
         margin: 0;
+        font-size: 25px;
+        padding: 5px;
     }
 
     .nav-links {
-        margin-left: 40px;
+        border: none;
     }
 
     .logo {
         margin-top: 0;
+        margin: auto;
     }
 
-    .navbar-toggle {
+    .navbar-toggle,
+    .name {
         display: none;
     }
 
-    .logo:hover,
-    .nav-links:hover {
-        color: rgba(255,255,255,1);
+    .search {
+        display: block;
+        padding: 5px;
+        font-family: FontAwesome;
+        height: 28px;
+        width: 230px;
+        border: 1px solid rgb(212, 211, 211);
+        border-radius: .3em;
+        background-color: rgb(248, 248, 248);
+        text-align: center;
     }
-} 
+    
+}
+
+@media screen and (min-width: 1088px) {
+    .logo,
+    .main-nav {
+        width: 30%;
+    }
+
+    .navbar {
+        padding: 0 8%;
+    }
+}
